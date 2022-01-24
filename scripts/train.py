@@ -69,8 +69,8 @@ if __name__ == "__main__":
         acc = accuracy_metric.compute(predictions=predictions, references=labels)
         f1 = f1_metric.compute(predictions=predictions, references=labels, average="micro")
         return {
-            "accuracy": acc,
-            "f1": f1,
+            "accuracy": acc["accuracy"],
+            "f1": f1["f1"],
         }
 
     # Prepare model labels - useful in inference API
