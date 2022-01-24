@@ -95,7 +95,7 @@ if __name__ == "__main__":
         per_device_eval_batch_size=args.per_device_eval_batch_size,
         warmup_steps=args.warmup_steps,
         fp16=args.fp16,
-        learning_rate=args.learning_rate,
+        learning_rate=float(args.learning_rate),
         seed=33,
         # logging & evaluation strategies
         logging_dir=args.logging_dir,
